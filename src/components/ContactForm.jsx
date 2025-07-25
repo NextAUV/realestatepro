@@ -15,19 +15,19 @@ export default function ContactForm() {
         type="text"
         placeholder="Your Name"
         required
-        className="rounded-lg border-gray-200 px-4 py-2 text-base shadow-sm focus:ring-2 focus:ring-blue-200 outline-none"
+        className="rounded-lg border-gray-200 px-4 py-2 text-base shadow-sm focus:ring-2 focus:ring-blue-200 outline-none bg-white text-gray-900"
       />
       <input
         type="email"
         placeholder="Your Email"
         required
-        className="rounded-lg border-gray-200 px-4 py-2 text-base shadow-sm focus:ring-2 focus:ring-blue-200 outline-none"
+        className="rounded-lg border-gray-200 px-4 py-2 text-base shadow-sm focus:ring-2 focus:ring-blue-200 outline-none bg-white text-gray-900"
       />
       <textarea
         placeholder="Your Message"
         required
         rows={4}
-        className="rounded-lg border-gray-200 px-4 py-2 text-base shadow-sm focus:ring-2 focus:ring-blue-200 outline-none"
+        className="rounded-lg border-gray-200 px-4 py-2 text-base shadow-sm focus:ring-2 focus:ring-blue-200 outline-none bg-white text-gray-900"
       />
       <button
         type="submit"

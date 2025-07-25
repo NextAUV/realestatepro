@@ -1,6 +1,9 @@
+"use client";
+import { useAuth } from "../../components/AuthProvider";
 import PropertyCard from "../../components/PropertyCard";
 import SearchBar from "../../components/SearchBar";
 import FilterSidebar from "../../components/FilterSidebar";
+import Link from "next/link";
 
 const properties = [
   {
@@ -34,6 +37,16 @@ const properties = [
 ];
 
 export default function PropertiesPage() {
+  const { user, loading } = useAuth();
+  if (loading) return <div className="text-center py-20 text-xl">Loading...</div>;
+  if (!user) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[60vh]">
+        <h2 className="text-2xl font-bold text-blue-700 mb-4">Please log in to view properties</h2>
+        <Link href="/login" className="bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700 transition font-semibold">Go to Login</Link>
+      </div>
+    );
+  }
   return (
     <div className="flex flex-col gap-8">
       <div className="w-full h-56 relative rounded-2xl overflow-hidden shadow-lg mb-8">
